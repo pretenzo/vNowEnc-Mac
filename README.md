@@ -16,9 +16,7 @@ Audio CD
 |
 + -- VDN Track 01
 |
-+ -- VDN Track 02
-|
-+ -- VDN Track 03, 04, 05, etc...
++ -- VDN Track 02, 03, 04, 05, etc... (if applicable)
 |
 + -- VDN Track 99 (Last)
 ```
