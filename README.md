@@ -7,7 +7,7 @@ To encode the video: ffmpeg -i input.mp4 -vf "scale=432:160" -r 18 -f rawvideo -
 To encode the audio: ffmpeg -i input.mp4 -af "aresample=17640,volume=8dB" -f wav -ar 17640 -acodec pcm_u8 audio.wav<br/> 
 
 # Creating A Custom VideoNow CD
-The output file will be called "VDN Track 01.wav" - it needs to be burned as an Audio CD with the two filler tracks provided in the source code. There's a limit of approximately 40 minutes of video per disc - because we have to cut it down, we need some empty space on the burned disc so we're not cutting into our data. <br/><br/>Once burned, the disc must be cut down to approx. 108mm to fit in an unmodded VideoNow player.
+The output file will be called "VDN Track 01.wav" - it needs to be burned as an Audio CD with the two filler tracks provided in the source code. You can include several tracks by transcoding them and then naming them "VDN Track 01" and "VDN Track 02" etc. There's a limit of approximately 40 minutes of video per disc - because we have to cut it down, we need some empty space on the burned disc so we're not cutting into our data. <br/><br/>Once burned, the disc must be cut down to approx. 108mm to fit in an unmodded VideoNow player.
 
 
 # Making A Disc Image
