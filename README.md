@@ -23,7 +23,7 @@ Audio CD
 
 
 # Making A Disc Image
-To make a disc image instead, you can also use my Wav2Bin program to generate a .bin/.cue file that can be burned to disc or decoded using PVDTools to ensure it was transcoded properly, i.e. <br/><br/>```./Wav2Bin myFilename "VDN Track 00 (First).wav" "VDN Track 01.wav" "VDN Track 99 (Blank).wav"``` <br/><br/> There's are also a test video/audio file combination that is known working with this implementation. You can use to ensure everything is working properly or to help debug. 
+To make a disc image instead, you can also use my Wav2Bin program to generate a .bin/.cue file that can be burned to disc or decoded using PVDTools to ensure it was transcoded properly, i.e. <br/><br/>```./Wav2Bin myFilename.bin myFilename.cue "VDN Track 00 (First).wav" "VDN Track 01.wav" "VDN Track 99 (Blank).wav"``` <br/><br/> There's are also a test video/audio file combination that is known working with this implementation. You can use to ensure everything is working properly or to help debug. 
 
 # Thank You
-The original version of vNowEnc is brought to you by trevlac (http://www.trevlac.us/vidNowEnc.zip) and additional documentation is available at: https://forum.videohelp.com/threads/203081-VideoNow-Color-%28and-Jr%29-Video-Conversions/page5
+The original version of vidNowEnc is brought to you by trevlac (http://www.trevlac.us/vidNowEnc.zip) and additional documentation is available at: https://forum.videohelp.com/threads/203081-VideoNow-Color-%28and-Jr%29-Video-Conversions/page5
