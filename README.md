@@ -2,7 +2,7 @@
 An application to create custom videos for Hasbro's VideoNow players. It encodes raw video files into VideoNow WAV/VDN format, on Mac! This implementation removes the need for Avisynth and Virtualdub. Instead, it utilizes ffmpeg to handle the transcoding tasks to automate & simplify the conversion process.
 
 # Usage 
-This program is expecting a RAW video formatted 24-bit bitmap with 8-bit audio at 17640Hz. You can convert your input video into the proper format by encoding it using ffmpeg.<br/> <br/>
+This program is expecting a RAW RGB video format (24-bit bitmap) with 8-bit audio at 17640Hz. You can convert your input video into the proper format by encoding it using ffmpeg.<br/> <br/>
 To encode the video: ```ffmpeg -i input.mp4 -vf "scale=432:160" -r 18 -f rawvideo -pix_fmt rgb24 video.rgb```<br/> 
 To encode the audio: ```ffmpeg -i input.mp4 -af "aresample=17640,volume=8dB" -f wav -ar 17640 -acodec pcm_u8 audio.wav```<br/> 
 
