@@ -1,5 +1,5 @@
 # VideoNow Video Encoder for Mac
-An application to create custom videos for Hasbro's VideoNow players. It encodes raw video files into VideoNow WAV/VDN format, on Mac! 
+An application to create custom videos for Hasbro's VideoNow players. It encodes raw video files into VideoNow WAV/VDN format, on Mac! This implementation removes the need for Avisynth and Virtualdub. Instead, it utilizes ffmpeg to handle the transcoding tasks to automate & simplify the conversion process.
 
 # Usage 
 This program is expecting a RAW video formatted 24-bit bitmap with 8-bit audio at 17640Hz. You can convert your input video into the proper format by encoding it using ffmpeg.<br/> <br/>
@@ -7,7 +7,7 @@ To encode the video: ```ffmpeg -i input.mp4 -vf "scale=432:160" -r 18 -f rawvide
 To encode the audio: ```ffmpeg -i input.mp4 -af "aresample=17640,volume=8dB" -f wav -ar 17640 -acodec pcm_u8 audio.wav```<br/> 
 
 # Creating A Custom VideoNow CD
-The output file will be called "VDN Track 01.wav" - it needs to be burned as an Audio CD with the two filler tracks provided in the source code. You can include several tracks by transcoding them and then naming them "VDN Track 01" and "VDN Track 02" etc. There's a limit of approximately 40 minutes of video per disc - because we have to cut it down, we need some empty space on the burned disc so we're not cutting into our data. <br/><br/>Once burned, the disc must be cut down to approx. 108mm to fit in an unmodded VideoNow player.<br/><br/>
+The output file will be called "VDN Track 01.wav" - it needs to be burned as an Audio CD with the two filler tracks provided in the source code (VDN Track 00 and VDN Track 99). You can include several tracks by transcoding them and then naming them "VDN Track 01" and "VDN Track 02" etc. There's a limit of approximately 40 minutes of video per disc - because we have to cut it down, we need some empty space on the burned disc so we're not cutting into our data. The size of my Audio CDs usually doesn't exceed 450MB or so, just to err on the side of caution <br/><br/>Once burned, the disc must be cut down to approx. 108mm to fit in an unmodded VideoNow player.<br/><br/>
 The structure of the Audio CD should be as follows:
 ```
 Audio CD
